@@ -1,0 +1,34 @@
+group 'com.tianyi.plugin_echat'
+version '1.0'
+
+buildscript {
+    repositories {
+        jcenter()
+        google()
+
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.3'
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    aaptOptions.cruncherEnabled = false
+
+    aaptOptions.useNewCruncher = false
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+}
